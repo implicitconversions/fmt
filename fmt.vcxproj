@@ -32,6 +32,7 @@
     <RootNamespace>fmt</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <!-- NX build configuration -->
   <PropertyGroup Condition="'$(Platform)'=='NX64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
@@ -43,10 +44,6 @@
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <NintendoSdkBin2ObjPlatformSpecificOptions>--machine aarch64 --little-endian --lp64</NintendoSdkBin2ObjPlatformSpecificOptions>
   </PropertyGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Platform)'=='NX64'">
-    <Import Project="../../msbuild/ImportNintendoSdk.props" />
-  </ImportGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
@@ -79,6 +76,9 @@
     <NintendoSdkBuildType>Develop</NintendoSdkBuildType>
     <NintendoSdkProgramKind />
   </PropertyGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Platform)'=='NX64'">
+    <Import Project="../../msbuild/ImportNintendoSdk.props" />
+  </ImportGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
