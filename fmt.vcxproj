@@ -169,7 +169,7 @@
       <OutputFile>$(OutDir)fmt.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='House|NX64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='House|NX64'"> 
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
