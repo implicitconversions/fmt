@@ -119,6 +119,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|NX64'">
     <ClCompile>
       <PreprocessorDefinitions>_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) --target=aarch64-nintendo-nx-elf -Wover-aligned -fvisibility-ms-compat</AdditionalOptions>
       <ImplicitFloat>true</ImplicitFloat>
     </ClCompile>
@@ -141,6 +142,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Retail|NX64'">
     <ClCompile>
       <PreprocessorDefinitions>NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OptimizationLevel>O3</OptimizationLevel>
       <Vectorization>true</Vectorization>
       <UnrollLoops>true</UnrollLoops>
